@@ -46,7 +46,7 @@
                             <ul class="space-y-2">
                                 <p class="text-gray-400 px-5 ">Main menu</p>
                                 <li>
-                                    <a href="#"
+                                    <a href="/"
                                         class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                         <svg aria-hidden="true"
                                             class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -298,7 +298,7 @@
                         <ul class="space-y-2">
                             <p class="text-gray-400 px-5 ">Main menu</p>
                             <li>
-                                <a href="#"
+                                <a href="/"
                                     class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                     <svg aria-hidden="true"
                                         class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -382,7 +382,7 @@
                                 </button>
                                 <ul id="Subjects" class="hidden py-2 space-y-2">
                                     <li>
-                                        <a href="Subjects"
+                                        <a href="/Subjects"
                                             class="flex items-center p-2 pl-11 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Subjects
                                             List</a>
                                     </li>
@@ -604,214 +604,425 @@
             <main class="flex-1">
                 <div class="py-6">
                     <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                        <h1 class="text-2xl font-semibold text-gray-900">Dashboard</h1>
+                        <h1 class="text-2xl font-semibold text-gray-900">Students</h1>
                     </div>
                     <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                         <!-- Replace with your content -->
                         <div>
-                            <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
-                                <div
-                                    class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                    <dt class="truncate text-sm font-medium text-gray-500 dark:text-gray-200">Total
-                                        Students</dt>
-                                    <dd
-                                        class="mt-1 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        71,897</dd>
-                                </div>
+                            <div>
 
-                                <div
-                                    class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                    <dt class="truncate text-sm font-medium text-gray-500 dark:text-gray-200">Total
-                                        Classes</dt>
-                                    <dd
-                                        class="mt-1 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                                        50</dd>
-                                </div>
-
-                                <div
-                                    class="overflow-hidden rounded-lg bg-white px-4 py-5 shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                    <dt class="truncate text-sm font-medium text-gray-500 dark:text-gray-200">Total
-                                        Lessons</dt>
-                                    <dd
-                                        class="mt-1 text-3xl font-semibold tracking-tight text-gray-900 dark:text-gray-200">
-                                        30</dd>
-                                </div>
-                            </dl>
-                        </div>
-                        <div>
-                            <div class="mt-5 md:flex gap-5">
-
-                                <a href="#"
-                                    class="block md:w-1/2  p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Number of Students</h5>
-                                    <div id="chart">
-                                        <apexchart type="bar" height="350" :options="chartOptions"
-                                            :series="series"></apexchart>
+                                <form class="flex items-center gap-5">
+                                    <label for="simple-search" class="sr-only">Search</label>
+                                    <div class="relative w-full">
+                                        <div
+                                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                                fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <input type="text" id="simple-search"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Search By ID" required>
+                                    </div> <label for="simple-search" class="sr-only">Search</label>
+                                    <div class="relative w-full">
+                                        <div
+                                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                                fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <input type="text" id="simple-search"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Search By name" required>
+                                    </div> <label for="simple-search" class="sr-only">Search</label>
+                                    <div class="relative w-full">
+                                        <div
+                                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                                fill="currentColor" viewBox="0 0 20 20"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                                    clip-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <input type="text" id="simple-search"
+                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            placeholder="Search By class" required>
                                     </div>
-                                </a> <a href="#"
-                                    class="block md:w-1/2  p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Overview</h5>
-                                    <div id="chart-line">
-                                        <apexchart type="bar" height="350" :options="chartOptions"
-                                            :series="series"></apexchart>
-                                    </div>
-                                </a>
+                                    <button type="submit"
+                                        class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                        </svg>
+                                        <span class="sr-only">Search</span>
+                                    </button>
+                                </form>
 
                             </div>
-                            <div class="mt-5 md:flex  gap-5">
+                            <div class="p-5 m-5 rounded-xl bg-white">
+                                <div class="flex justify-between items-center mb-5">
+                                    <h1 class="text-xl font-bold">Students</h1>
 
-                                <a href="#"
-                                    class="block md:w-1/2  p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Star Students</h5>
+                                    <div class="flex gap-5">
+                                        <button type="button"
+                                            class="inline-flex items-center rounded-xl border border-transparent bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                            <!-- Heroicon name: outline/plus -->
+                                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M12 4.5v15m7.5-7.5h-15" />
+                                            </svg>
+                                        </button>
+                                        <button type="button"
+                                            class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                            Download
+                                            <!-- Heroicon name: mini/envelope -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="ml-3 -mr-1 h-5 w-5">
+                                                <path fill-rule="evenodd"
+                                                    d="M9.75 6.75h-3a3 3 0 00-3 3v7.5a3 3 0 003 3h7.5a3 3 0 003-3v-7.5a3 3 0 00-3-3h-3V1.5a.75.75 0 00-1.5 0v5.25zm0 0h1.5v5.69l1.72-1.72a.75.75 0 111.06 1.06l-3 3a.75.75 0 01-1.06 0l-3-3a.75.75 0 111.06-1.06l1.72 1.72V6.75z"
+                                                    clip-rule="evenodd" />
+                                                <path
+                                                    d="M7.151 21.75a2.999 2.999 0 002.599 1.5h7.5a3 3 0 003-3v-7.5c0-1.11-.603-2.08-1.5-2.599v7.099a4.5 4.5 0 01-4.5 4.5H7.151z" />
+                                            </svg>
 
-                                    <div class="overflow-x-auto relative">
-                                        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                                            <thead
-                                                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                                <tr>
-                                                    <th scope="col" class="py-3 px-6">
-                                                        ID
-                                                    </th>
-                                                    <th scope="col" class="py-3 px-6">
-                                                        mark
-                                                    </th>
-                                                    <th scope="col" class="py-3 px-6">
-                                                        Percentage
-                                                    </th>
-                                                    <th scope="col" class="py-3 px-6">
-                                                        Year
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                                    <th scope="row"
-                                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        John Smith
-                                                    </th>
-                                                    <td class="py-4 px-6">
-                                                        1185
-                                                    </td>
-                                                    <td class="py-4 px-6">
-                                                        98%
-                                                    </td>
-                                                    <td class="py-4 px-6">
-                                                        2019 </td>
-                                                </tr>
-                                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                                    <th scope="row"
-                                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        mohammed
-                                                    </th>
-                                                    <td class="py-4 px-6">
-                                                        1511
-                                                    </td>
-                                                    <td class="py-4 px-6">
-                                                        90%
-                                                    </td>
-                                                    <td class="py-4 px-6">
-                                                        2020
-                                                    </td>
-                                                </tr>
-                                                <tr class="bg-white dark:bg-gray-800">
-                                                    <th scope="row"
-                                                        class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                        khaled
-                                                    </th>
-                                                    <td class="py-4 px-6">
-                                                        1000
-                                                    </td>
-                                                    <td class="py-4 px-6">
-                                                        80%
-                                                    </td>
-                                                    <td class="py-4 px-6">
-                                                        2022
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+
+                                        </button>
                                     </div>
 
 
+                                </div>
 
-                                </a> <a href="#"
-                                    class="block md:w-1/2  p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                                    <h5 class="mb-3 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                        Activity</h5>
-                                    <div class="flex justify-between mb-5 items-center">
-                                        <div class="flex gap-3">
-                                            <div class="p-2 bg-blue-200 w-fit rounded-xl">
-                                                <img src="{{ asset('images/award-icon-01.svg') }}" alt=""
-                                                    srcset="">
-                                            </div>
-                                            <div>
-                                                <h1 class="font-bold text-sm">Participated in "Carrom"</h1>
-                                                <h1 class=" text-xs text-gray-500">Justin Lee participated in "Carrom"
-                                                </h1>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h1 class="text-xs bg-yellow-50 px-2 py-1 rounded-xl">2 hours ago</h1>
-                                        </div>
-                                    </div>
-                                    <div class="flex justify-between mb-5 items-center">
-                                        <div class="flex gap-3">
-                                            <div class="p-2 bg-blue-200 w-fit rounded-xl">
-                                                <img src="{{ asset('images/award-icon-02.svg') }}" alt=""
-                                                    srcset="">
-                                            </div>
-                                            <div>
-                                                <h1 class="font-bold text-sm">Internation conference in "St.John School"
-                                                </h1>
-                                                <h1 class=" text-xs text-gray-500">Justin Leeattended internation conference in "St.John School"
+                                <div class="overflow-x-auto relative  sm:rounded-lg">
+                                    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                                        <thead
+                                            class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                            <tr>
+                                                <th scope="col" class="p-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-all-search" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-all-search"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </th>
+                                                <th scope="col" class="py-3 px-6">
+                                                    ID
+                                                </th>
+                                                <th scope="col" class="py-3 px-6">
+                                                    name
+                                                </th>
+                                                <th scope="col" class="py-3 px-6">
+                                                    class
+                                                </th>
+                                                <th scope="col" class="py-3 px-6">
+                                                    Action </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr
+                                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="p-4 w-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-table-search-1" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-table-search-1"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"
+                                                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    PRE2209
+                                                </th>
+                                                <td class="py-4 px-6">
+                                                    Mathematics
+                                                </td>
 
-                                                </h1>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h1 class="text-xs bg-yellow-50 px-2 py-1 rounded-xl">2 Week ago
-                                            </h1>
-                                        </div>
-                                    </div>
-                                    <div class="flex justify-between mb-5 items-center">
-                                        <div class="flex gap-3">
-                                            <div class="p-2 bg-blue-200 w-fit rounded-xl">
-                                                <img src="{{ asset('images/award-icon-03.svg') }}" alt=""
-                                                    srcset="">
-                                            </div>
-                                            <div>
-                                                <h1 class="font-bold text-sm">Won 1st place in "Chess"
-                                                </h1>
-                                                <h1 class=" text-xs text-gray-500">John Doe won 1st place in "Chess"
+                                                <td class="py-4 px-6">
+                                                    5
+                                                </td>
+                                                <td class="py-4 px-6">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="p-4 w-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-table-search-1" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-table-search-1"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"
+                                                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    PRE2213
+                                                </th>
+                                                <td class="py-4 px-6">
+                                                    History
+                                                </td>
 
-                                                </h1>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h1 class="text-xs bg-yellow-50 px-2 py-1 rounded-xl">3 Day ago
-                                            </h1>
-                                        </div>
-                                    </div>
-                                    <div class="flex justify-between mb-5 items-center">
-                                        <div class="flex gap-3">
-                                            <div class="p-2 bg-blue-200 w-fit rounded-xl">
-                                                <img src="{{ asset('images/award-icon-01.svg') }}" alt=""
-                                                    srcset="">
-                                            </div>
-                                            <div>
-                                                <h1 class="font-bold text-sm">1st place in "Chess”</h1>
-                                                <h1 class=" text-xs text-gray-500">John Doe won 1st place in "Chess"
-                                                </h1>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h1 class="text-xs bg-yellow-50 px-2 py-1 rounded-xl">1 Day ago</h1>
-                                        </div>
-                                    </div>
-                                </a>
+                                                <td class="py-4 px-6">
+                                                    6
+                                                </td>
+                                                <td class="py-4 px-6">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                </td>
+                                            </tr>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="p-4 w-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-table-search-1" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-table-search-1"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"
+                                                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    PRE2143
+                                                </th>
+                                                <td class="py-4 px-6">
+                                                    Science
+                                                </td>
+
+                                                <td class="py-4 px-6">
+                                                    3
+                                                </td>
+                                                <td class="py-4 px-6">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                </td>
+                                            </tr>                                            <tr
+                                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="p-4 w-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-table-search-1" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-table-search-1"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"
+                                                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    PRE2209
+                                                </th>
+                                                <td class="py-4 px-6">
+                                                    Mathematics
+                                                </td>
+
+                                                <td class="py-4 px-6">
+                                                    5
+                                                </td>
+                                                <td class="py-4 px-6">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="p-4 w-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-table-search-1" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-table-search-1"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"
+                                                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    PRE2213
+                                                </th>
+                                                <td class="py-4 px-6">
+                                                    History
+                                                </td>
+
+                                                <td class="py-4 px-6">
+                                                    6
+                                                </td>
+                                                <td class="py-4 px-6">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                </td>
+                                            </tr>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="p-4 w-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-table-search-1" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-table-search-1"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"
+                                                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    PRE2143
+                                                </th>
+                                                <td class="py-4 px-6">
+                                                    Science
+                                                </td>
+
+                                                <td class="py-4 px-6">
+                                                    3
+                                                </td>
+                                                <td class="py-4 px-6">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                </td>
+                                            </tr>                                            <tr
+                                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="p-4 w-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-table-search-1" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-table-search-1"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"
+                                                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    PRE2209
+                                                </th>
+                                                <td class="py-4 px-6">
+                                                    Mathematics
+                                                </td>
+
+                                                <td class="py-4 px-6">
+                                                    5
+                                                </td>
+                                                <td class="py-4 px-6">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                </td>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="p-4 w-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-table-search-1" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-table-search-1"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"
+                                                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    PRE2213
+                                                </th>
+                                                <td class="py-4 px-6">
+                                                    History
+                                                </td>
+
+                                                <td class="py-4 px-6">
+                                                    6
+                                                </td>
+                                                <td class="py-4 px-6">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                </td>
+                                            </tr>
+                                            </tr>
+                                            <tr
+                                                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                                <td class="p-4 w-4">
+                                                    <div class="flex items-center">
+                                                        <input id="checkbox-table-search-1" type="checkbox"
+                                                            class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                                        <label for="checkbox-table-search-1"
+                                                            class="sr-only">checkbox</label>
+                                                    </div>
+                                                </td>
+                                                <th scope="row"
+                                                    class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                    PRE2143
+                                                </th>
+                                                <td class="py-4 px-6">
+                                                    Science
+                                                </td>
+
+                                                <td class="py-4 px-6">
+                                                    3
+                                                </td>
+                                                <td class="py-4 px-6">
+                                                    <a href="#"
+                                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <nav class="flex justify-between items-center pt-4" aria-label="Table navigation">
+                                        <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Showing
+                                            <span class="font-semibold text-gray-900 dark:text-white">1-10</span> of
+                                            <span
+                                                class="font-semibold text-gray-900 dark:text-white">1000</span></span>
+                                        <ul class="inline-flex items-center -space-x-px">
+                                            <li>
+                                                <a href="#"
+                                                    class="block py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                                    <span class="sr-only">Previous</span>
+                                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" aria-current="page"
+                                                    class="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="block py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                                    <span class="sr-only">Next</span>
+                                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
+                                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                            clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
 
                             </div>
                         </div>
