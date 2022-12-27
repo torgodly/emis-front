@@ -24,3 +24,12 @@ Route::get('/Students', function () {
 Route::get('/Subjects', function () {
     return view('Subjects');
 });
+Route::get('/Teachers', function () {
+    return view('Teachers');
+});
+Route::get('/Events', function () {
+    return view('Events');
+});
+Route::get('/Exams', function () {
+    return view('Exams');
+});
